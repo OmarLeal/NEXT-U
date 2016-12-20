@@ -1,4 +1,4 @@
-var images = ['1.png', '2.png', '3.png', '4.png'];
+var images = ['1.png', '2.png', '3.png', '4.png', '1.png'];
 jQuery.each( images, function( i, val ) {
  $('<img class="ui-state-default" src="image/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('.col-1'); 
  $('<img class="ui-state-default" src="image/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('.col-2'); 
@@ -286,8 +286,16 @@ $(function(){
 		}	
 	});	
  $( function() {
-    $( ".ui-state-default" ).sortable({axis: "y", axis: "x", connectWith: ".col-2 ui-state-default"});
-    $( ".ui-state-default" ).disableSelection();
-  });
+    $( ".ui-state-default").sortable({
+    	connectWith: $("#col-1"),
+    	connectWith: $("#col-2"),
+    	connectWith: $("#col-3"),
+    	connectWith: $("#col-4"),
+    	connectWith: $("#col-5"),
+    	connectWith: $("#col-6"),
+    	connectWith: $("#col-7")
+    }).disableSelection();
+		});
+ 
 
 

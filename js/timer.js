@@ -15,8 +15,14 @@ function done(){
   }, 2000 );
 $('.btn-reinicio').click(function(){
     $( ".panel-tablero" ).show();
+    time = new Date(120000);
+    $( ".score" ).animate({        
+     "width": "100%",
+  }, 2000 );
+    $( ".moves" ).animate({        
+     "width": "100%",
+  }, 2000 );
  });
- time = new Date(120000);
 }
 $(function(){
     displayTime();
