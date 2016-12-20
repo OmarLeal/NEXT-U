@@ -1,190 +1,150 @@
 @font-face {
-    font-family: 'Dancing Script'; 
-    src: url('Dancing_Script.ttf');
-			}
-header
-{
-	background-color: #5b7989;
-	border-radius: 10px;
+  font-family: gameFont;
+  src: url('../fonts/PressStart2P.ttf');
 }
-header>h1
-{
-	color: white;
-	text-align: left;
-	text-shadow: 2px #02010a;
-}
-nav
-{
-	color: #02010a;;
-	text-align: right;
-	text-decoration: none;
-	display: inline;
-}
-body
-{
-	font-family: 'Dancing Script'; 
-	background-color: #02010a; 
+*{
+  box-sizing: border-box;
 }
 
-#seccionPrimaria
-{
-	background-color: #82c3a6;
-}
-#central
-{
-	width: 50%;
-	height: 80%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-#paisajes
-{
-	float: left;
-	
-}
-#retratos
-{
-	float: right;
+body{
+  background-image: url('../image/background.jpg');
+  background-size: cover;
 }
 
-.primaria
-{
-	min-height: 300px;
-	flex-direction: : column;
-	order: 1;
+.main-container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-.secundaria
-{
-	min-height: 300px;
-	flex-direction: : column;
-	order: 2;
-}
-#seccionSecundaria
-{
-	background-color: #d5c75f;
-	border-radius: 1px;
-}
-#paisajes
-{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-}
-#paisajes:hover
-{
-
-  transform: rotate(10deg);
-  border-radius: 2px;
-  color: #82c3a6; 
-}
-#retratos
-{
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-}
-#retratos:hover
-{
-
-  transform: translate3d(5px, 20px, 0px);
-  border-radius: 2px;
-  color: #82c3a6; 
-}
-#contenido
-{
-	float: center;
-	width: 900px;
+.main-titulo{
+  font-family: gameFont;
+  font-size: 3em;
+  color: #DCFF0E;
+  width: 100%;
 }
 
-article
-{
-	font-family: 'Dancing Script'; 
-	display: inline;
-	margin-left: 20px;
-	color: white;
+.panel-tablero{
+  width: 70%;
+  border: 10px solid #E87306;
+  background: rgba(232, 115, 6, 0.5);
+  border-radius: 5px;
+  height: 700px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.panel-score{
+  width: 25%;
+  height: 700px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
 
-@media (max-width: 900px) and (max-height: 900px)
-{
-	#contenido
-	{
-		width: 100%;
-	}
+.score, .moves, .time{
+  text-align: center;
+  height: 23%;
+  width: 100%;
+  border: 10px solid #E87306;
+  border-radius: 5px;
+  background: rgba(232, 115, 6, 0.5);
 }
 
-@media (max-width: 200px) and (max-height: 200px)
-{
-	.primaria
-	{
-		{
-		min-height: 200px;		
-	}
-	}
-	.secundaria
-	{
-		min-height: 200px;	
-	}
+
+.buttons{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-#galeria1>img
-{
-	margin-left: 10px;
-	margin-bottom: 10px;
+
+.data-titulo, .data-info{
+  font-family: gameFont;
+  color: #E8CA06;
 }
-#galeria2>img
-{
-	margin-left: 10px;
+.titulo-over{
+  font-family: gameFont;
+  font-size: 3em;
+  text-align: center;
+  color: #DCFF0E;
 }
-#img1
-{
-	-webkit-filter:blur(10px);
-	filter:blur(10px);
+.btn-reinicio{
+  background: #E8CA06;
+  border: 6px solid #FFB206;
+  border-radius: 5px;
+  font-family: gameFont;
+  font-size: 1.2em;
+  color: #FF4007;
 }
-#img2
-{
-	-webkit-filter:grayscale(100%);
-	filter:grayscale(100%);
+.btn-reinicio:hover{
+  color: #fff;
+  cursor: pointer;
 }
-#img3
-{
-	-webkit-filter:sepia(90%);
-	filter:sepia(90%);
+.btn-reinicio:active{
+  font-size: 1em;
 }
-#img4
-{
-	-webkit-filter:grayscale(100%);
-	filter:grayscale(100%);
+.data-info{
+  font-size: 1.8em;
 }
-#img6
-{
-	-webkit-filter:grayscale(100%);
-	filter:grayscale(100%);
+div[class^='col']{
+  width: 14.28%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+
 }
-#retratos1>#img1
-{
-	-webkit-filter:blur(10px);
-	filter:blur(10px);
+
+.elemento{
+  width: 99.4px;
+  height: 96px;
+
 }
-#img2
-{
-	-webkit-filter:grayscale(100%);
-	filter:grayscale(100%);
+
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
-#img3
-{
-	-webkit-filter:sepia(90%);
-	filter:sepia(90%);
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
-#img4
-{
-	-webkit-filter:grayscale(100%);
-	filter:grayscale(100%);
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
-#img6
-{
-	-webkit-filter:grayscale(100%);
-	filter:grayscale(100%);
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
-#contenido
-{
-	background-color: #C6d5c5;
-	border-radius: 10px;
+a{
+    margin: 0 10px;
+    color: gray;
+}
+.time{
+    font-size: 50px;
+    margin: 20px;
+    font-family: monospace;
 }
