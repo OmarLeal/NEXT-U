@@ -1,4 +1,4 @@
-var startValue = 120000; //Number of milliseconds
+var startValue =  120000; 
 var time = new Date(startValue);
 var interv;
 
@@ -16,6 +16,8 @@ function done(){
 $('.btn-reinicio').click(function(){
     $( ".panel-tablero" ).show();
     time = new Date(120000);
+    $('#score-text').text("0");
+    $('#movimientos-text').text("0");
     $( ".score" ).animate({        
      "width": "100%",
   }, 2000 );
@@ -45,7 +47,7 @@ $(function(){
         clearInterval(interv);
     });
     $("btn:contains('Reiniciar')").on("click", function(){
-        time = new Date(120000);
+        time = new Date(120000);        
         displayTime();
     });
 });
