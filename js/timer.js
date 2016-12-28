@@ -1,20 +1,26 @@
-var startValue =  120000; 
+var startValue = 120000; 
 var time = new Date(startValue);
 var interv;
 
 
 function done(){    
-    $( ".panel-tablero" ).toggle(2000);
+    $( ".panel-tablero" ).toggle(1000);
+    $( ".time" ).toggle(1000);
     $( ".score" ).animate({        
-     "width": "700px",
+     "width": "1500px",
      "margin-left": "20px"
   }, 2000 );
     $( ".moves" ).animate({        
-     "width": "700px",
+     "width": "1500px",
      "margin-left": "20px"
   }, 2000 );
-$('.btn-reinicio').click(function(){
+    $(".main-titulo").append("<h3 class='main' id='juegoTerminado' style='text-align: center;'>Juego Terminado</h3>");        
+ 
+$('.btn-reinicio').click(function(){        
+    location.reload();
     $( ".panel-tablero" ).show();
+    $( ".time" ).show();
+    $("#juegoTerminado").toggle(2000);
     time = new Date(120000);
     $('#score-text').text("0");
     $('#movimientos-text').text("0");
